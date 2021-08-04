@@ -1,0 +1,537 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+.header_margin{
+	height: 72px;
+}
+.aaaaaaa{
+	
+	background-color: white;
+	width: 400px;
+	height: 300px;
+}
+
+.bg-dark{
+    background-color: rgba(250, 88, 91, 1)!important;
+}
+
+.row{
+    --bs-gutter-x:1.5rem;
+    --bs-gutter-y:0;
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:calc(var(--bs-gutter-y) * -1);
+    margin-right:calc(var(--bs-gutter-x) * -.5);
+    margin-left:calc(var(--bs-gutter-x) * -.5)
+}
+.row>*{
+    flex-shrink:0;
+    width:100%;
+    max-width:100%;
+    padding-right:calc(var(--bs-gutter-x) * .5);
+    padding-left:calc(var(--bs-gutter-x) * .5);
+    margin-top:var(--bs-gutter-y)
+}
+
+@media (min-width:576px){
+    .row{flex-direction: column;}
+    .col-sm-4{flex:0 0 auto;width:100%}
+    .col-sm-8{flex:0 0 auto;width:100%}
+}
+
+@media (min-width:1024px){
+    .row{flex-direction:row;}
+    .col-sm-4{flex:0 0 auto;width:30%}
+    .col-sm-8{flex:0 0 auto;width:70%}
+}
+
+
+@media (min-width:576px){.container,.container-sm{max-width:736px}}
+@media (min-width:768px){.container,.container-md,.container-sm{max-width:736px}}
+@media (min-width:1024px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}
+@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:960px}}
+@media (min-width:1400px){.container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{max-width:960px}}
+
+ /
+
+
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+     
+ }
+.title {
+   color: white;
+}
+input[type=checkbox], input[type=radio]{
+	width:20px;
+	height:20px;
+	margin-right: 10px;
+}
+.button_wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button_item{
+    all: unset;
+    width: 14rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+
+@media (min-width:1024px){
+   .button_wrap{display: none;}
+    .out_detail{display: none;}
+}
+@media (max-width:1024px){
+    .sel_checkbox1,.icon-bar{display: none!important;}
+    .col-sm-4{display: none;}
+    .datepick{display:block!important;}
+    .header_margin{
+	height: 0px;
+    
+}
+    
+}
+
+
+
+.checkin{
+    display: flex;
+    justify-content: space-around;
+    color:darkgray;
+}
+
+#from, #to{
+    all: unset;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 5.3rem;
+    text-align: center;
+    height: 1.6rem;
+    
+}
+
+.btn_group{
+    margin-bottom: 1rem;
+    text-align: center
+}
+.btn {
+  background-color: white;
+  color: black;
+  padding: 0 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 5.9rem;
+}
+
+.clear {
+  border: 2px solid rgba(250, 88, 91, 1);
+  color: rgba(250, 88, 91, 1);
+}
+.apply {
+  background-color: rgba(250, 88, 91, 1);
+  color: white;
+}
+.col-sm-4{
+    
+    padding: 1rem;
+   border: 1px solid #ccc;
+}
+.form_main_title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem 0;
+}
+.form_title{
+    margin: 2rem 0 0.5rem 0;
+}
+form p{
+    margin: 0;
+}
+
+#minus, #plus{
+    all: unset;
+    margin: 0 1rem;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+#minus:disabled, #plus:disabled{
+    cursor: default;
+    color: #ddd;
+}
+#minus{
+    margin-left: 2rem;
+}
+#res{
+    display: inline-block;
+    width: 40px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.sub_check{
+    
+    display: flex;
+    
+}
+.sub_col{
+    flex-basis: 50%;
+}
+.sub_col p{
+    font-size: 1.0rem;
+    display: flex;
+    align-items: center;
+}
+.content_wrap{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+}
+.content_text_left{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 1rem;
+}
+.content_text_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    align-self: flex-end;
+    padding: 1rem;
+}
+.acc_grade{
+    background-color: #615fb8;
+    font-size: 0.7rem;
+    width: 3rem;
+    text-align: center;
+    margin: 0;
+}
+.acc_name{
+    font-size: 2rem;
+    margin: 0;
+}
+.acc_rating{
+    color: orange;
+    margin: 0;
+}
+.acc_dist{
+    margin: 0;
+}
+.acc_ava{
+    font-size: 0.7rem;
+    margin: 0;
+    text-align: right;
+}
+.acc_price{
+    margin: 0;
+}
+.fakeimg {
+    color: white;
+    height: 200px;
+    width: 100%;
+    background: #aaa;
+    background-image: url(./img/hotel.jpg);
+}
+
+/* w3schools Dropdown Button */
+.dropbtn2 {
+  background-color: rgba(250, 88, 91, 1);
+  color: white;
+   padding: 0.3rem; 
+  font-size: 1rem;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+/*  white-space: nowrap;*/
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+/*.dropdown-content a:hover {background-color: #ddd;}*/
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
+
+/* --w3schools hover taps */
+/* Style the tab */
+.tab {
+  float: left;
+  border-right: 1px solid #ccc;
+  background-color: white;
+  width: 20%;
+  height: 100%;
+    padding : 1rem 0 1rem 1rem;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tab button.active::after {
+    content: '>';
+    float: right;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+/*  background-color: #ddd;*/
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  color: red;
+}
+
+.tabcontent a:hover {
+  color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+   padding: 1rem; 
+   width: 80%; 
+  border: none;
+  height: 100%; 
+  display: none;
+}
+
+/* --w3schools Icon Bar */
+.icon-bar {
+  display: flex;
+  background-color : rgba(252, 252, 252, 1);
+    margin-bottom: 1rem;
+    height: 2rem;
+    align-items: center;
+    
+}
+
+.icon-bar button {
+  text-align: center;
+  width: 20%;
+    height: 2rem;
+    line-height: 2rem;
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: #555;
+  font-size: 1rem;
+    border: 1px solid #ddd;
+    background-color : rgba(252,252,252);
+    align-self: center;
+}
+
+.icon-bar .map{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.icon-bar button:hover {
+  background-color: rgba(250, 88, 91, 1); /* Add a hover color */
+    color: white!important;
+}
+.icon-bar .btn1{
+	    border-top-left-radius: 5px;
+	    border-bottom-left-radius: 5px;
+}
+
+ .order-active {
+    color: red!important;
+}
+
+.order-active::before {
+    content: "✓";
+} 
+.search-button{
+	width: 45px;
+	    border-radius: 5px;
+    background-color: #f3eaea;
+    margin-top: 3px;
+    color: #dc3535;
+    font-weight: 550;
+}
+
+.lock_on{
+    
+    overflow : hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin-left: 0;
+    padding: 0;
+    border: 0px;
+    z-index: 0;
+    
+}
+.lock_on2{
+    
+    display: none;
+}
+
+
+.aaon {
+    display: block!important;  
+    position: absolute;
+    top: 0;
+    
+    z-index: 300;
+    width: 100%;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    bottom: auto;
+    height: 100%;
+    padding: 100px 20px 20px;
+    z-index: 1;
+}
+.detail_form_fix{
+    background-color: aliceblue;
+    margin-left: -21px;
+    margin-top: -100px;
+    width:100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.out_detail{
+    align-self: flex-end;    
+    
+    width:30px;
+}
+
+/* 맵 모달창 */
+.map-modal-container{
+	width:100%;
+    height: 100%;
+	display:flex;
+	position: fixed;
+	flex-direction: column;
+	align-items: center;
+	z-index: 100;
+}
+
+.map-modal-wrap{
+    position: absolute!important;
+    TOP: 50%;
+    LEFT: 50%;
+    TRANSFORM: TRANSLATE(-50%,-50%);
+    width:70%;
+    height:80%;
+    background-color: white;
+    z-index: 60001;   
+}
+.order-container{
+	display:none;
+	
+}
+.order-modal-container{
+	diplay:block!important;
+    position: absolute!important;
+    TOP: 50%;
+    LEFT: 50%;
+    TRANSFORM: TRANSLATE(-50%,-50%);
+    width:270px;
+    height:300px;
+    background-color: white;
+    z-index: 60001;   
+}
+.order-modal-container ul{
+margin-bottom: 4px;
+z-index:100;
+list-style:none;
+padding-left:15px;
+padding-right:15px;
+	
+}
+.order-modal-container ul li button{
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+height: 64px;
+font-size: 16px
+line-height: 64px;
+color: rgba(0,0,0,0.87);
+text-align: left;
+}
+
+.order-modal-container button{
+	background: none;
+	width: 100%;
+	font-weight: norma;
+}
+.order-modar-close{
+	border : none;
+	background: none;
+	width: 100%;
+	font-size: 14px;
+	color: red;
+}
+
+
+ .map-modal-bg{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    z-index: 60000;
+    padding: 5vh 0px;
+}
+.datepick{
+	display:none;
+}
+.datepicker-here{
+	font-size: 17px;
+    border-radius: 5px;
+}
+.date-font{
+	padding-block: 5px;
+    color: white;
+    font-size: 20px;
+}

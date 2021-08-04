@@ -1,0 +1,1092 @@
+@charset "UTF-8";
+
+.info_head{
+    width: 100%;
+    height: 211px;
+    background-color: rgba(250, 88, 91, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_head2{
+	width:1024px;
+	 margin: 0 auto;
+}
+
+.info_head2 h2{
+	display: block;
+    margin: 21px 0 0 31px;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #fff;
+}
+.info_body_wrap{
+	width: 100%;
+	display :flex;
+	justify-content: center;
+	padding-top: 54px;
+	padding-bottom: 50px;
+}
+.info_body{
+	width: 1024px;
+    display: flex;
+    padding-left: 31px  
+}
+
+
+/* ====================諛붾뵒 �쇊履� 由ъ뒪�듃 ==================== */
+.info_list {
+	padding-left:31px;
+    width: 269px;
+    height: 100%;
+    padding-left: 0px;
+   /*  background-color: yellow; */
+    
+}
+
+.info_list ul li{
+	margin-bottom: 26px;
+	list-style:none;
+	
+}
+
+.info_list ul li a{
+	text-decoration: none;
+	font-size: 18px;
+    color: rgba(0,0,0,0.56);
+}
+.mobile_top{
+	display:none;}
+	
+/* 닉네임 */	
+.info_top{
+	position: relative;
+}
+
+.info_top strong{
+	padding: 0 0 43px 0;
+	margin-bottom: 43px;
+	font-size: 18px;
+	color: black;
+}
+
+.info_nik{
+		display:flex;
+	flex-direction:column;
+	position: relative;
+	
+}
+
+.info_nik_title{
+	padding-right: 240px;
+}
+
+.info_nik_title b{
+	width: 120px;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 18px;
+}	
+
+.login_nik{
+	font-size: 18px;
+	color: rgba(0,0,0,0.56);
+}
+
+.nik_modify_layout{
+	display:flex;
+	flex-direction:column;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 50px;
+	padding-right: 110px;
+}
+	
+.nik_modify_btn{
+	display: block;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}	
+
+.nik_modify_finish_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #ff0055;
+	cursor: pointer;
+}
+
+.nik_modify_cancel_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}
+
+.nik_modify_section{
+		/* display:none; */
+		position: relative;
+		margin: 0 0 33px 0;
+		padding-right: 110px;
+}
+
+.nik_modify_wrap{
+	width: 374px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.nik_modify_wrap input{
+	border: none;
+	outline:none;
+	background: none;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.56);
+}
+
+/* 예약자 이름 */
+/* .info_res{
+	display:flex;
+	flex-direction:column;
+	position: relative;
+	
+}
+
+.info_res_title{
+	padding-right: 240px;
+}
+
+.info_res_title b{
+	width: 120px;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 18px;
+}	
+
+.res_modify_layout{
+	display:flex;
+	flex-direction:column;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 50px;
+	padding-right: 110px;
+}
+	
+.res_modify_btn{
+	display: block;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}	
+
+.res_modify_finish_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #ff0055;
+	cursor: pointer;
+}
+
+.res_modify_cancel_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}
+
+.res_modify_section{
+		display:none;
+		position: relative;
+		margin: 0 0 33px 0;
+		padding-right: 110px;
+}
+
+.res_modify_wrap{
+	width: 374px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.res_modify_wrap input{
+	border: none;
+	outline:none;
+	background: none;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.56);
+} */
+
+/* 휴대폰 번호 */
+.info_phone{
+	display:flex;
+	flex-direction:column;
+	position: relative;
+	
+}
+
+.info_phone_title{
+	padding-right: 240px;
+}
+
+.info_phone_title b{
+	width: 120px;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.phone_num{
+	font-size: 18px;
+	color: rgba(0,0,0,0.56);
+}	
+
+.phone_blurb{
+	display:block;
+	padding-bottom: 14px;
+	font-size: 14px;
+	color: rgba(0,0,0,0.56);
+	clear: both;
+}
+
+.phone_certification{
+	right: auto;
+	left: 415px;
+	position: absolute;
+	top: 12px;
+	width: 100px;
+	height: 44px;
+	border: none;
+	border-radius: 4px;
+	background: rgb(216,216,216);
+	font-size: 14px;
+	font-weight: normal;
+	color: #fff;
+	cursor: pointer;
+}
+
+.phone_modify_layout{
+	display:flex;
+	flex-direction:column;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 50px;
+	padding-right: 110px;
+}
+	
+.phone_modify_btn{
+	display: block;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}	
+
+.phone_modify_finish_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	cursor: pointer;
+	background-color: rgb(216,216,216);
+}
+
+.phone_modify_cancel_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 144px;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}
+
+.phone_modify_section{
+		/* display:none; */
+		position: relative;
+		margin: 0 0 33px 0;
+		padding-right: 110px;
+}
+
+.phone_modify_wrap{
+	width: 374px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.phone_modify_wrap input{
+	border: none;
+	outline:none;
+	background: none;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.56);
+}
+
+.phone_certification_num p{
+	width: 120px;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 18px;
+	padding-right: 336px;
+}
+
+.input_number{
+	width: 374px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 8px 14px 8px 16px;
+    position: relative;
+    height: 48px;
+    border-radius: 4px;
+    font-size: 18px;
+    outline: none;
+}
+
+.input_number input{
+	border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.56);
+}
+
+.btn-action2{
+	width: 100px;
+	height: 44px;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.check_number_off{
+	display: none;
+}
+.check_number_on{
+	display: block;
+}
+
+
+/*=======================로그아웃 회원탈퇴=================== */
+.hate_you{
+	height: 56px;
+	margin-top: 48px;
+	border-top: 1px solid rgba(0,0,0,0.08);
+	background: none;
+	text-align: left;
+	padding-right: 16px;
+}
+
+.hate_you p{
+	display: inline-block;
+	padding-top: 23px;
+	font-size: 16px;
+	color: rgba(0,0,0,0.56);
+}
+
+.hate_you button{
+	height: auto;
+	margin-top: 0;
+	padding: 0 8px;
+	border: none;
+	background: none;
+	font-size: 16px;
+	color: rgba(0,0,0,0.87);
+	text-decoration: underline;	
+	display: inline-block;
+	margin: 0;
+	cursor: pointer;
+	white-space: nowrap;
+}	
+
+
+/* ====================1024�씠�븯 諛섏쓳�삎 ==================== */
+@media (max-width:1024px){
+
+.info_layout{
+	margin: 0px 10px 0px 10px;
+	width:100%;}
+.mobiel_top{
+	display:block!important;
+}
+.res_history{
+	display:none;
+}
+.info_head{
+	display:none;
+}
+.info_body{
+	flex-direction:column;
+	padding-left: 0px;
+	width: 100%;
+}
+.content{
+	width:100%!important;
+}
+
+.info_list{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding-left: 0px;
+}
+
+.info_top strong{
+	display: block;
+	padding: 30px 0 50px 0;
+	font-size: 16px;
+}
+
+.info_nik_title b{
+	width: 42%;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.nik_modify_btn {
+    display: block;
+    border: solid 1px #ccc;
+    width: 47%;
+    float: left;
+    margin-right: 5%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.87);
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    background: #fff;
+    cursor: pointer;
+}
+
+.nik_modify_finish_btn {
+    display: none;
+    border: solid 1px #ccc;
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    background: #ff0055;
+    cursor: pointer;
+}
+
+.nik_modify_cancel_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 45%;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}
+
+.nik_modify_wrap{
+	width: 91%;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.login_nik {
+    font-size: 16px;
+    color: rgba(0,0,0,0.56);
+}
+
+.info_phone_title b{
+	width: 42%;
+	float: left;
+	margin-bottom: 12px;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.phone_num {
+    font-size: 16px;
+    color: rgba(0,0,0,0.56);
+}
+
+.phone_blurb {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 12px;
+    color: rgba(0,0,0,0.56);
+
+}
+
+.phone_modify_wrap{
+	width: 90%;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.phone_certification {
+    right: auto;
+    left: 102%;
+    top: 15%;
+    width: 100px;
+    height: 44px;
+    border: none;
+    border-radius: 4px;
+    background: rgb(216,216,216);
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+}
+
+.phone_modify_btn {
+    display: block;
+    border: solid 1px #ccc;
+    width: 47%;
+    float: left;
+    margin-right: 5%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.87);
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    background: #fff;
+    cursor: pointer;
+}
+
+.phone_modify_finish_btn {
+    display: none;
+    border: solid 1px #ccc;
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    background : rgb(216,216,216);
+    /* background: #ff0055; */
+    cursor: pointer;
+}
+
+.phone_modify_cancel_btn{
+	display: none;
+	border: solid 1px #ccc;
+	width: 45%;
+	float: left;
+	margin-right: 5%;
+	height: 42px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.87);
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+	background: #fff;
+	cursor: pointer;
+}
+
+.hate_you{
+	height: 56px;
+	margin-top: 16px;
+	padding-right: 16px;
+	background: rgb(216,216,216);
+	text-align: right;
+	line-height: 0;
+}
+
+.hate_you button{
+	height: 40px;
+    margin-top: 8px;
+    padding: 0 8px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: rgba(0,0,0,0.87);
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.mobile_top{
+	display: block!important;
+	position: relative;
+    height: 44px;
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+	
+}
+
+.mobile_top_btn{
+	display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 44px;
+    padding: 0 16px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 44px;
+    color: rgba(0,0,0,0.87);
+}
+
+/*===================1024px 내정보 수정 시작==================== */
+.myinfo_page{
+	position: relative;
+	height: 44px;
+	background: #fff;
+	font-size: 18px;
+	line-height: 44px;
+	text-align: center;
+}
+
+
+
+
+
+
+} 
+
+/* ====================諛붾뵒 �삤瑜몄そ 吏덈Ц紐⑸줉==================== */
+.myinfo_page{
+	font-size: 18px;
+    font-weight: bold;
+    color: rgb(230,28,81)!important;}
+    
+.active::after{
+	display: block;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(242,17,76);
+}
+
+.content{
+ width: 724px;
+    /* background-color: blue; */
+    height: 100%;
+
+}
+
+
+
+/* ====================�쐞濡� 怨듯넻 css==================== */
+b{
+	width:100%;
+}
+.info_top{
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+    color: rgba(0,0,0,0.56);
+}
+
+.info_wrap{
+	display: flex;
+	flex-direction: column;
+}
+.select_type_1{
+	border: 1px solid rgba(0,0,0,0.08);
+	border-radius: 5px;
+	margin-bottom: 40px;
+	margin-top: 15px;
+	height: 50px;
+	background-color: rgb(250,250,250);
+}
+
+.inp_wrap input{
+	height: 60px;
+	width:100%;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+.text_wrap div textarea{
+	width:100%;
+	height: 200px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.08);
+	resize: none;
+}
+.text_wrap div{
+	margin-top: 15px;
+}
+.inp_chk_04{
+	width: 14px;
+    height: 14px;
+}
+.agree_wrap{
+	margin: 15px 0px 30px 0px;
+}
+.agree_wrap a{
+	color: rgba(0, 0, 0, 0.56);
+}
+.btn_wrap{
+	text-align: center;
+}
+.btn_red_fill{
+	background: linear-gradient(to bottom, #ff0055 0%,#e62243 100%);
+	display: inline-block;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 144px;
+    height: 48px;
+	
+}
+
+/*==============================탈퇴 모달=========================*/
+.map_modal_off{
+	display: none;
+}
+.leave-modal-bg{
+	display: block!important;
+    width:100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    padding: 5vh 0px;
+}
+.leave-modal-bgoff{
+ display: none;	
+}
+
+.map-modal-container {
+	display: block!important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 49999;
+}
+.map-modal-container2 {
+	display: block!important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50001;
+}
+.map-modal-bg{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    z-index: 1;
+    padding: 5vh 0px;
+}
+
+.section_fix_title{
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.fix_title{
+	padding: 0;
+	height: 60px;
+	max-width: 384px;
+	margin: 144px auto 0;
+	display: block!improtant;
+	position: relative;
+	background: #fff;
+	border-bottom: none;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 300;
+	width: 100%;
+	font-size: 18px;
+	line-height: 44px;
+	text-align: center;
+}
+
+.fix_title strong{
+	display: block;
+	line-height: 44px;
+	font-size: 27px;
+}
+
+.fix_title button, .close{
+	margin-right: 0;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+	border: none;
+	background: url("../../img/close.png") 50% 50% no-repeat;
+	background-size: 24px auto;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.cont_section{
+	width: 100%;
+	margin: 0;
+	top: 204px;
+	height: calc(100% - 204px);
+	overflow: auto;
+	position: relative;
+}
+
+.cont_step01{
+	max-width: 410px;
+	margin: auto;
+	padding: 0 24px 20px 24px;
+	color: rgba(0,0,0,0.56);
+}
+
+.cont_why{
+	padding: 32px 0 40px 0;
+	text-align: center;
+}
+
+.cont_why h1{
+	font-size: 24px;
+	margin-bottom: 16px;
+	font-family: 'yg-jalnan';
+	line-height: 1.2;
+	color: rgba(0,0,0,0.72);
+}
+
+
+.point-text{
+	color: #eb4242;
+}
+
+.reason_list li{
+	padding: 14px 0;
+	position: relative;
+	color: rgba(0,0,0,0.8);
+	margin: 0 !important;
+	list-style: none;
+}
+
+.reason_list input[type=radio]{
+	position: absolute;
+	width:16px;
+	height:16px;
+	top: 18px;
+	left: 29px;
+	border: none;
+	outline: none;
+	opacity: 0;
+	cursor: pointer;
+	
+
+}
+
+.reason_list label{
+	text-indent: -32px;
+	/* display: block; */
+	margin-left: 32px;
+	line-height: 1;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.reason_list input[type=radio]+label:before{
+	display: inline-block;
+    border-radius: 50%;
+    content: "";
+    border: solid 1px rgba(0,0,0,0.08);
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+.reason_list input[type=radio]:checked+label:before{
+	background: #eb4242;
+	border: solid 1px #eb4242;
+}
+
+.real_leave_panel{
+	position: relative;
+	color: rgba(0,0,0,0.8);
+}
+
+.real_leave_layout{
+	padding-top: 20px;
+}
+
+.real_leave_btn{
+	background: #fafafa;
+	color: rgba(0,0,0,0.16);
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 18px 20% 17px 20%;
+	width: 100%;
+	height: 56px;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+

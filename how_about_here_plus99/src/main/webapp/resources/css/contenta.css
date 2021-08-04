@@ -1,0 +1,1164 @@
+@charset "UTF-8";
+
+.content {
+	overflow: hidden;
+	overflow-x: hidden;
+	font-family: "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.87);
+	-webkit-text-size-adjust: none;
+}
+.reserve{
+	margin-top: 50px!important;
+}
+.content .reserve {
+	width: 1024px;
+	margin: 0px auto 0 auto;
+	padding: 13px;
+	display: flex;
+}
+
+.reserve .react_right {
+	display: none;
+}
+/*--------------------right 세부사항-------------------------------*/
+.reserve .right {
+	width: 310px;
+	float: right;
+	margin: 39px 24px 0 24px;
+	padding: 0 0 31px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	background: #fafafa;
+	margin: 39px 24px 0 24px;
+}
+
+#info {
+	margin: 39px 24px 0 24px;
+	padding: 0 0 31px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	display: block;
+	outline: 0;
+	font-size: 16px;
+	visibility: visible;
+}
+
+#info p {
+	height: auto;
+	margin: 0 0 29px 0;
+	padding: 0;
+	border-bottom: none;
+	list-style: 32px;
+	text-align: left;
+	position: relative;
+	box-sizing: border-box;
+	outline: 0;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+strong {
+	display: block !important;
+	position: relative;
+	margin-bottom: 6px;
+	font-size: 18px !important;
+	line-height: 1;
+	color: rgb(0, 0, 0, 0.38);
+	top: 0;
+	left: 0;
+	font-weight: normal;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+#total_price {
+	margin: 39px 24px 33px 24px !important;
+	display: block;
+	padding: 0 !important;
+	border-bottom: 0 !important;
+	background: none !important;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.87);
+	visibility: visible;
+}
+
+#total_price p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font: 16px;
+	color: rgba(0, 0, 0, 0.87);
+	visibility: visible;
+}
+
+#total_price p strong {
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: 0;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+#total_price p span {
+	display: block;
+	padding: 19px 0 23px 0;
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(230, 28, 81);
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: 0;
+	visibility: visible;
+}
+
+#total_price ul {
+	list-style: none;
+	display: block;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.87);
+	visibility: visible;
+}
+
+#total_price ul li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	margin-bottom: 2px;
+	padding-left: 16px;
+	background: url(../img/ico_bul3.png) 0 0 no-repeat;
+	background-size: 16px;
+	line-height: 26px;
+	color: rgba(0, 0, 0, 0.72);
+	list-style: none;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+#total_price ul li span {
+	color: rgb(230, 28, 81);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.pay_btn {
+	display: block;
+	border-radius: 0 0 4px 4px;
+	width: 100%;
+	height: 56px;
+	border: none;
+	font-size: 15px;
+	line-height: 56px;
+	color: #fff;
+	text-align: center;
+	background: linear-gradient(to right, rgba(255, 0, 85, 1) 1%,
+		rgba(230, 34, 67, 1) 100%);
+	padding: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	outline: 0;
+}
+
+{
+}
+
+/* ---------------반응형 right------------------------ */
+@media ( max-width : 1024px) {
+	.right {
+		display: none;
+		
+	}
+	.content .reserve {
+    width: 100%;
+}
+	.right info {
+		display: none;
+	}
+	.reserve .react_right {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		display: block;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+		line-height: 1;
+		background: rgba(0, 0, 0, 0);
+	}
+	.react_right .react_info {
+		display: block;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		display: block;
+		width: 100%;
+		background: rgba(0, 0, 0, 0);
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+	}
+	.react_right .react_info name {
+		height: 64px;
+		margin-bottom: 20px;
+		padding: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		line-height: 64px;
+		text-align: left;
+		position: relative;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+	}
+	.react_right .react_info name strong {
+		display: none;
+	}
+	.react_right .react_info p {
+		position: relative;
+		margin-bottom: 13px;
+		padding-left: 120px;
+		text-align: right;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	.react_right .react_info p strong {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: rgba(0, 0, 0, 0.56);
+		font-weight: normal;
+		text-align: left;
+		font-size: 16px;
+	}
+	#react_total_price {
+		display: none;
+	}
+	#pay_btn {
+		display: none;
+	}
+}
+/*------------------------------------------------------------------------------  */
+.left {
+	float: right;
+	width: 564px;
+	margin: 48px 88px 0 0;
+	box-sizing: border-box;
+}
+
+/* -------------------반응형 @media- left-------------------------------------- */
+@media ( max-width : 1024px) {
+	.reserve {
+	display:flex;
+	flex-direction:column;
+		width: 100%;
+		background: rgb(235, 235, 235);
+		font-size: 16px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		-webkit-text-size-adjust: none;
+		background: #fff;
+	}
+	.reserve .left {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		display: block;
+		font-size: 16px;
+		width: 100%;
+		background: rgba(0, 0, 0, 0);
+		line-height: 1;
+	}
+	.react_right{
+	margin-bottom: 15px!important;}
+	
+	.left .inform_user {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		display: block;
+		visibility: visible;
+	}
+	.reserve .left info_chkin {
+		margin: 0 0 8px 0;
+		padding: 26px 16px 24px;
+		background: #fff;
+		padding-top: 26px !important;
+		padding-bottom: 24px !important;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	.reserve .left info_chkin h3 {
+		margin-top: 0;
+		display: none;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		visibility: visible;
+	}
+	.reserve .left info_chkin strong {
+		font-weight: normal;
+		display: block;
+		padding: 0 0 8px 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+		width: 100%;
+		background: #fff;
+		opacity: 0;
+	}
+	.inp_wrap_remove {
+		position: relative;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		height: 48px;
+		padding: 0 40px 0 10px;
+		border-radius: 4px;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 16px;
+		width: 100%;
+	}
+	.inp_wrap_remove p {
+		visibility: hidden;
+		padding-top: 2px;
+		font-size: 13px;
+		color: rgb(230, 28, 81);
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		width: 100%;
+		background: rgb(235, 235, 235);
+		opacity: 1;
+	}
+	.inp_wrap_remove input {
+		border: none;
+		background: none;
+		width: 100%;
+		margin-top: 5px;
+		font-size: 18px;
+		color: rgba(0, 0, 0, 0.56);
+		line-height: 1;
+		height: 20px;
+		border-radius: 0;
+		padding: 1px 2px;
+		visibility: visible;
+	}
+	.alert_txt {
+		visibility: hidden;
+		padding-top: 2px;
+		font-size: 13px;
+		color: rgb(230, 28, 81);
+	}
+	.send_accmo {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+	}
+	.send_accmo mt_09 {
+		font-weight: normal;
+		display: block;
+		padding: 0 0 8px 0;
+		margin-top: 9px;
+		box-sizing: border-box;
+		outline: 0;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+	}
+	.send_accmo safety_txt {
+		display: block;
+		padding-bottom: 8px;
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0.56);
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+	}
+	.phone_confirm {
+		padding: 0 110px 0 0;
+		margin-bottom: 36px;
+		position: relative;
+		margin-top: 16px;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		visibility: visible;
+		height: 70px;
+	}
+	.phone_confirm inp_wrap {
+		border: 1px solid; rgba (0,0,0,0.08) !important;
+		position: relative;
+		height: 48px;
+		border-radius: 4px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		outline: 0;
+	}
+	
+.verification_check{
+	margin-bottom: 50px!important;
+	}
+	#phoneNumber {
+		border: none;
+		background: none;
+		width: 100%;
+		height: 20px;
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 1;
+		color: rgba(0, 0, 0, 0.56);
+		-webkit-appearance: none;
+		border-radius: 0;
+	}
+	.reset_val {
+		visibility: hidden;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: 14px;
+		width: 20px;
+		height: 20px;
+		height: 20px;
+		margin-top: -10px;
+		border: none;
+		background: url("../img/ico_reset.png") 50% 50% no-repeat;
+		background-size: 20px auto;
+		text-indent: -9999px;
+		padding: 0;
+		cursor: pointer;
+	}
+	.btn_send_btn_confirm {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100px;
+		height: 48px;
+		padding: 13px 0 10px;
+		border: none;
+		border-radius: 4px;
+		background: #ccc;
+		font-size: 15px;
+		color: #fff;
+		cursor: pointer;
+	}
+	#verificationCode {
+		visibility: hidden;
+		padding-top: 2px;
+		font-size: 13px;
+		color: rgb(230, 28, 81);
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+	}
+	.pay_select {
+		margin: 0 0 8px 0;
+		padding: 0 16px;
+		background: #fff;
+		padding: 23px 16px !important;
+		border: 0;
+		box-sizing: border-box;
+		display: block;
+	}
+.pay_select h3 {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 16px;
+		font-weight: normal;
+	}
+	#payment_select {
+		width: 100%;
+		height: 40px;
+		padding: 0 12px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		border-radius: 4px;
+		background: rgb(250, 250, 250) url("../img/ico_arr_down.png") right 10px
+			top 50% no-repeat;
+		background-size: 25px auto;
+		font-size: 16px;
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+	.left .react_pirce_tag {
+		visibility: visible;
+		display: block;
+		margin: 0 0 8px 0;
+		padding: 0 16px;
+		background: #fff;
+		margin-bottom: 8px !important;
+		padding-bottom: 21px !important;
+		border: 0;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.87);
+		display: block;
+	}
+	.react_pirce_tag p {
+		border-bottom: none;
+		position: relative;
+		height: 64px;
+		line-height: 64px;
+		text-align: right;
+	}
+	.react_pirce_tag p strong {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 64px;
+		line-height: 64px;
+		font-weight: normal;
+		text-align: left;
+		box-sizing: border-box;
+	}
+	.react_pirce_tag p b {
+		font-weight: bold;
+		line-height: 64px;
+		text-align: left;
+		font-size: 16px;
+	}
+	.react_pirce_tag span {
+		color: rgb(230, 28, 81);
+		font-weight: normal;
+		list-style: none;
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.react_pirce_tag .in_price_app {
+		font-weight: bold;
+		color: rgb(230, 28, 81);
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		line-height: 64px;
+		text-align: right;
+		font-size: 16px;
+	}
+	.react_pirce_tag ul {
+		font-size: 15px;
+		line-height: 24px;
+		color: rgba(0, 0, 0, 0.72);
+		list-style: none;
+	}
+	.react_pirce_tag ul li {
+		margin-bottom: 6px;
+		padding: 16px;
+		background: url("../img/ico_bul_3.png") 0 0 no-repeat;
+		background-size: 14px auto;
+		list-style: none;
+		box-sizing: border-box;
+		font-size: 15px;
+		line-height: 24px;
+		color: rgba(0, 0, 0, 0.72);
+	}
+}
+
+/*------------------------left 세부사항-------------------------------------------------------  */
+#info_chkin {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pay_select h3 {
+		margin-bottom: 10px;
+	}
+
+#info_chkin strong {
+	display: block;
+	padding: 0 0 12px 0;
+	color: rgba(0, 0, 0, 0.56);
+	font-weight: normal;
+	font-size: 18px;
+}
+
+#info_chkin h3 {
+	margin: 54px 0 42px 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.inp_wrap_remove {
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.087);
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inlin-end: 0px;
+}
+
+.inp_wrap_remove input {
+	border: none;
+	background: none;
+	width: 100%;
+	margin-top: 5px;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.56);
+	line-height: 1;
+	height: 20px;
+	border-radius: 0;
+}
+
+
+
+.phone_num {
+	font-weight: normal;
+	display: block;
+	padding: 0 0 12px 0;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.56);
+	margin-top: 0;
+}
+
+.safety_txt {
+	padding-bottom: 14px;
+	font-size: 14px;
+	display: block;
+	color: rgba(0, 0, 0, 0.56);
+}
+.phone_confirm{
+	margin-top: 16px;
+	position: relative;
+	margin-bottom: 36px;
+	border: 0;
+	padding: 0 110px 0 0;
+	
+}
+
+
+.inp_wrap {
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 8px 14px 8px 16px;
+	position: relative;
+	height: 48px;
+	border-radius: 4px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.87);
+	margin: 0;
+}
+
+.inp_wrap input {
+	border: none;
+	background: none;
+	width: 100%;
+	margin-top: 5px;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.56);
+	height: 20px;
+	line-height: 1;
+	text-rendering: auto;
+	color: -internal-light-dark(black, white);
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+}
+
+.btn_send_btn_confirm {
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 66px;
+	padding: 13px 0 10px;
+	border: none;
+	border-radius: 4px;
+	background: #ccc;
+	font-size: 15px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	margin-block-start: auto;
+	/*
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 48px;
+	padding: 13px 0 10px;
+	border: none;
+	border-radius: 4px;
+	background: #ccc;
+	font-size: 15px;
+	color: #fff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	outline: 0;
+	opacity: 1;
+	visibility: visible;
+	padding: 13px 0 10px;*/
+}
+
+.reset_val {
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	border: none url("../img/ico_reset.png") 50% 50% no-repeat;
+	background-size: 20px auto;
+	text-indent: -9999px;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+.guest_login {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+	padding: 22px 0;
+	font-size: 15px;
+	line-height: 22px;
+	text-align: center;
+	background: #ff0055 url("../img/login_back_img.png");
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.guest_login a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+	cursor: pointer;
+	font-size: 15px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.pay_select {
+	margin: 0 0 0 0;
+	padding: 0 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	background: #fff;
+	box-sizing: border-box;
+	display: block;
+	outline: 0;
+	font-size: 16px;
+}
+
+.pay_select p3 {
+	display: block;
+	margin-bottom: 19px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 54px 0 42px 0;
+	box-sizing: border-box;
+}
+
+.select_type_1 {
+	width: 288px;
+	height: 48px;
+	border: 1px solid rgba(0, 0, 0, 00.8);
+	background: #fafafa url("../img/ico_arr_down.png") right 10px top 50%
+		no-repeat;
+	background-size: 25px auto;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.56);
+	cursor: pointer;
+	outline: 0;
+	appearance: none;
+}
+
+.agree {
+	padding: 23px 16px;
+	font-size: 16px;
+	border: none;
+	background: #fff;
+	box-sizing: border-box;
+	display: block;
+	outline: 0;
+	visibility: visible;
+}
+
+.agree p {
+	font-weight: 700;
+	position: relative;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	line-height: 1.2;
+	padding-left: 37px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: 0;
+	display: block;
+	font-size: 16px;
+	visibility: visible;
+}
+
+.agree p i {
+	font-style: normal;
+	text-decoration: underline;
+	color: rgba(0, 0, 0, 0.56);
+	cursor: pointer;
+	line-height: 1.2;
+	font-size: 16px;
+	outline: 0;
+	-webkit-text-size-adjust: none;
+}
+
+.agree p input {
+	position: relative;
+	top: 50%;
+	left: 0;
+	margin-top: -12px;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: url("../img/ico_chk.png") 0 0 no-repeat;
+	background-size: 24px auto;
+	cursor: pointer;
+	appreances: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	margin: 3px 3px 3px 4px;
+	padding: inherit;
+	margin: 3px 3px 3px 4px
+}
+
+.agree span b {
+	font-weight: 400;
+	color: #e61c51;
+	cursor: pointer;
+}
+
+.btn_pay_react {
+	display: none;
+	width: 100%;
+	height: 56px;
+	border: none;
+	font-size: 15px;
+	line-height: 56px;
+	color: #fff;
+	text-align: center;
+	background: linear-gradient(to right, rgba(255, 0, 085, 1) 1%,
+		rgba(230, 34, 67, 1) 100%);
+}
+
+.react_pirce_tag {
+	display: none;
+}
+
+/* ------------------------------결제버튼 under 1024------------------------------ */
+@media ( max-width : 1024px) {
+	.btn_pay_react {
+		display: block;
+		width: 100%;
+		height: 56px;
+		border: none;
+		font-size: 15px;
+		line-height: 56px;
+		color: #fff;
+		text-align: center;
+		background: linear-gradient(to right, rgba(255, 0, 85, 1) 1%,
+			rgba(230, 34, 67, 1) 100%);
+	}
+}
+
+/* ---------------------결제 모달창--------------------- */
+.openModal strong {
+	display: block;
+	height: 58px;
+	padding: 0 0 0 24px;
+	font-size: 16px;
+	line-height: 58px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.confirm_detail {
+	padding: 24px;
+	line-height: normal;
+}
+
+.confirm_detail name ellip {
+	margin-bottom: 6px;
+	font-size: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.confirm_detail .name {
+	margin-bottom: 6px;
+	font-size: 16px;
+}
+
+.confirm_detail .chkin_print_date {
+	position: relative;
+	text-align: right;
+	margin-top: 17px;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.confirm_detail .chkin_print_date span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: rgba(50, 50, 50, 0.5);
+	text-align: left;
+}
+
+.confirm_detail .chkin_print_date b {
+	font-weight: bold;
+	text-align: right;
+	font-size: 16px;
+}
+
+.confirm_detail .chkout_print_date {
+	position: relative;
+	text-align: right;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.confirm_detail .chkout_print_date span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: rgba(50, 50, 50, 0.5);
+	text-align: left;
+	font-size: 16px;
+}
+
+.confirm_detail .chkout_print_date b {
+	font-weight: bold;
+	text-align: right;
+	font-size: 16px;
+}
+
+#refund_policy {
+	margin-top: 20px;
+	padding-top: 21px;
+	border-top: 1px dotted rgba(0, 0, 0, 0.32);
+}
+
+.dot_txt {
+	margin-bottom: 2px;
+	padding-left: 15px;
+	background: url("../img/ico_bul_3.png") 0 0 no-repeat;
+	background-size: 13px auto;
+	font-size: 14px;
+	line-height: 22px;
+	color: rgba(0, 0, 0, 0.56);
+}
+
+.dot_txt b {
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.confirm_btn {
+	height: 48px;
+	padding: 0 16px 0 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	text-align: right;
+}
+
+.confirm_btn .cancel {
+	height: 48px;
+	padding: 0 16px;
+	margin-right: 8px;
+	font-size: 14px;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.56);
+	cursor: pointer;
+	-webkit-appearance: none;
+	border-radius: 0;
+	outline: 0;
+	border: 0;
+	background-color: rgba(0, 0, 0, 0);
+}
+.confirm_btn .agrre_payment{
+margin-right: 0;
+padding: 0 8px;
+color: #00796b;
+height: 48px;
+border: 0;
+background: none;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+outline: 0;
+}
+
+
+
+
+
+
+
+
+/*=======모달=====*/
+.modal_off{
+	display: none;
+}
+
+.map-modal-container-pay {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	align-items: center;
+	z-index: 100;
+}
+
+.modal-container-pay {
+	diplay: block !important;
+	position: absolute !important;
+	TOP: 50%;
+	LEFT: 50%;
+	TRANSFORM: TRANSLATE(-50%, -50%);
+	width: 310px;
+	height: 400px;
+	background-color: white;
+	z-index: 60001;
+	border-radius: 4px;
+}
+
+.map-modal-bg-pay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	position: absolute;
+	z-index: 60000;
+	padding: 5vh 0px;
+}
+.input_form{
+	width:100%;
+	border-radius: 5px;
+	height: 35px;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.input_name{
+	margin-bottom: 35px;
+	
+}
+.btn-sms{
+	font-size: 13px;
+	border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 25px;
+}
+.check_number_off{
+	display: none;
+}
+.check_number_on{
+	display: block!important;
+}
+.input_wrap{
+	margin-top: 10px;	
+}
+strong{
+margin-bottom: 10px;	
+}
+
+.select_type_1{
+	border-radius: 5px;
+}
+.pay_selectP{
+	margin-top: 10px;
+}
+
+/* 
+.join_form_none{
+	display : none;
+}
+
+.title{
+	font-size: 20px; 	
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.input_wrap{
+	position: relative;
+    margin: 0 0 10px 0;
+    
+	
+}
+
+.input_number{
+	width:100%;
+	height:35px;
+	border-radius: 5px;
+	text-align:center;
+	font-size: 20px;
+	
+}
+
+.btn-sms{
+	width: 30%;
+	height: 35px;
+	background-color: rgb(239,239,239,1);
+	border-radius: 5px;
+	border : none;
+	color: white;
+	
+} */

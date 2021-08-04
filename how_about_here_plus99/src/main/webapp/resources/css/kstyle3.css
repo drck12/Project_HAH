@@ -1,0 +1,612 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+}
+
+.body-container{
+ margin-top: 6%!important;
+}
+.header-container{
+	width:100%!important;
+}
+.grp_menu{
+	line-height: 28px!important;
+}
+
+/* .header{
+    height: 72px;
+    width: 100%;
+    line-height: 72px;
+    text-align: center;
+    color: white;
+    background-color: #f7323f;
+    display: flex;
+} */
+
+.content_wrapper{
+/*    width: 1000px;*/
+    max-width: 1000px;
+    margin: 0 0.5rem;
+    
+    
+}
+
+.upper_content{
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+    
+}
+.acc_photo{
+    width: 50%;
+}
+
+/*--------------photo start----------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.column img{
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*--------------photo end----------------*/
+.acc_title{
+    width: 50%;
+/*    background-color:antiquewhite ;*/
+    padding: 0 1rem;
+    
+}
+
+.acc_title p{
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.acc_title > p:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.acc_title > p > span:nth-child(1){
+    padding: 0.2rem;
+    color: white;
+    background-color: #ffa726;
+    border-radius: 5px;
+}
+
+.acc_title > p > span:nth-child(2){
+    padding: 0 0.5rem;
+    color: #ffa726;
+    
+}
+
+.acc_title > p:nth-child(4) span{
+    background-color: darkgrey;
+    border-radius: 5px;
+    
+    
+}
+
+.acc_title button{
+    display: flex;
+    background: linear-gradient( to right, #019bbd, #12b1a3);
+    width: 100%;
+    margin-top: 1rem;
+/*    padding: 1rem;*/
+    text-align: left;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+/*    cursor: pointer;*/
+    
+}
+
+.acc_title button ul{
+    padding: 0 1rem;
+}
+
+.acc_title button::after{
+    content: '\1F892';
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+}
+
+.lower_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+/*    background-color: azure;*/
+}
+
+/*--------------tab content start--------------*/
+
+/* Style the tab */
+.tab {
+    width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+/*  background-color: #f1f1f1;*/
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+    width: 100%;
+/*  padding: 6px 12px;*/
+/*
+  border: 1px solid #ccc;
+  border-top: none;
+*/
+}
+/*----------tab content end---------------------------*/
+
+/*----------accordion content start--------------------*/
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.active1, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active1:after {
+  content: "\2212";
+}
+
+.panel {
+    font-size: 0.8rem;
+  padding: 0 2rem;
+  background-color: white;
+  max-height: 0;
+/*    display: none;*/
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*----------accordion content end----------------------*/
+
+.tabcontent{
+    display: flex;
+    flex-direction: column;
+}
+
+.datepicker-here{
+    background-color: #fbfbfb;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.datepicker_wrapper{
+    display: inline-block;
+    margin-top: 1rem;
+/*    width: 100%;*/
+    position: relative;
+    background-color: antiquewhite;
+}
+
+.datepicker_wrapper::before{
+    content: "\1F5D3";
+    position: absolute;
+    font-size: 2rem;
+/*    top: 1px;*/
+    left: 3px;
+    pointer-events: none;
+}
+
+.datepicker_wrapper::after{
+    content: "\1F893";
+    position: absolute;
+    font-size: 2rem;
+    top: 15px;
+    right: 3px;
+    pointer-events: none;
+}
+
+.empty_room{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    justify-content: center;
+    text-align: center;
+    color: #ddd;
+    background-image: url(../img/empty_room.jpg);
+    background-size: cover;
+    height: 500px;
+    margin-top: 1rem;
+}
+
+.reserve{
+   display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+}
+
+.reserve img{
+    width: 50%;
+    object-fit: cover;
+    padding: 1rem;
+    
+}
+
+.reserve_text{
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reserve_text p{
+    color: #ffa726;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.reserve_text div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.reserve_text div:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reserve_text div:nth-child(3) span:nth-child(1){
+    color: white;
+    background-color: #ed1948;
+    padding: 0.2rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+
+.reserve_text div:nth-child(3) span:nth-child(2){
+    font-weight: bold;
+}
+
+.reserve_text div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserve_text div:nth-child(4) span:nth-child(2){
+    color: #ed1948;
+}
+
+.reserve_text div:nth-child(5){
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserve_text div:nth-child(5) span:nth-child(2){
+    color: #ed1948;
+}
+
+.reserve_text button{
+    
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 0;
+    color: white;
+    background-color: #ed1948;
+    cursor: pointer;
+}
+
+.panel_content{
+    padding: 1rem;
+}
+
+.panel_content p{
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.panel_content ul{
+    margin: 0;
+}
+
+#map{
+    background-color: aquamarine;
+    width: 100%;
+    height: 200px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.price p{
+    margin-bottom: 0.2rem;
+}
+
+.price table th{
+    height: 2rem;
+    color: white;
+    background-color: #ccc;
+    width: 25%;
+}
+
+.price table td{
+    height: 3rem;
+}
+
+.price table, table td, table th {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review_rate{
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.review_rate p{
+    margin: 0.5rem 0;
+}
+
+.review_rate p:nth-child(2){
+    font-size: 1.5rem;
+}
+
+.review_rate p:nth-child(2) span:nth-child(1){
+    color: #ffa726;
+    padding-right: 1rem;
+}
+
+.review_rate p:nth-child(2) span:nth-child(2){
+    vertical-align: middle;
+}
+
+.review_rate div span{
+    padding: 0 1rem;
+    font-size: 0.8rem;
+}
+
+.review_rate div span:nth-child(1){
+    border-right: 1px solid #ddd;
+}
+
+.customer_review{
+/*    background-color: antiquewhite;*/
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.emoji{
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.customer_review p{
+    margin: 0;
+}
+
+.review_title{
+    font-weight: bold;
+}
+
+.review_rating span:nth-child(1){
+    color: #ffa726;
+    padding-right: 0.5rem;
+}
+
+.review_rating span:nth-child(2){
+    vertical-align: middle;
+}
+
+.reviewer{
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.reviewer span:nth-child(1){
+    padding-right: 0.5rem;
+}
+
+.reveiw_date{
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+}
+
+.review_reply{
+    background-color: #ddd;
+    display: flex;
+    padding: 1rem;
+}
+
+#review{
+    display: none;
+}
+
+#data-container{
+    width: 100%;
+}
+
+#pagination{
+    margin-top: 1rem;
+}
+
+.footer{
+    height: 72px;
+    width: 100%;
+    line-height: 72px;
+    text-align: center;
+    color: white;
+    background-color: #ddd;
+}
+
+@media (max-width:1024px){
+    .upper_content{flex-direction: column; align-items: center;}
+    .acc_photo{width: 100%;}
+    .acc_title{width: 100%; padding: 0;}
+    .tab button{width: 33.333%;}
+    .reserve{flex-direction: column;}
+    .reserve img{width: 100%;}
+    .reserve_text{width: 100%;}
+    .datepicker_wrapper{width: 100%;}
+}

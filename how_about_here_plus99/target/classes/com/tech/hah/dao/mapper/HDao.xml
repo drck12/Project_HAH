@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tech.hah.dao.HDao">
+
+	<sql id="orderBy">
+		<choose>
+			<when test='arg0 == "distance"'>
+				ORDER BY ACC_RATING DESC
+			</when>
+			<when test='arg0 == "low"'>
+				ORDER BY ACC_SRPRICE
+			</when>
+			<when test='arg0 == "high"'>
+				ORDER BY ACC_SRPRICE DESC
+			</when>
+			<otherwise>
+				ORDER BY ACC_RATING DESC
+			</otherwise>
+		</choose>
+	</sql>
+
+
+	<select id="hotel" resultType="com.tech.hah.dto.AccommodationDto">
+		SELECT * FROM ACCOMMODATION WHERE
+		ACC_TYPE = #{arg1}
+		<include refid="orderBy" />
+	</select>
+	
+	<select id="motel" resultType="com.tech.hah.dto.CAccommodationDto">
+		SELECT A.*,B.PHOTO_NAME FROM ACCOMMODATION A INNER JOIN PHOTO B ON (A.ACC_CODE = B.ACC_CODE) WHERE B.PHOTO_TYPE = 'MAIN'
+	</select>
+
+</mapper>

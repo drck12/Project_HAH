@@ -1,0 +1,757 @@
+@charset "UTF-8";
+
+.wrap{
+    margin: 0px;
+	overflow-x:scroll; 
+	overflow-x:hidden;
+}
+
+
+.header{
+	box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 10%);
+   /* position: fixed; */   /* 스크롤 내릴때 헤더부분 따라내려오게 */ 
+   position: fixed;
+   z-index :50000;
+   width:100%;
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
+.header_div{
+
+   display: flex;
+   flex-direction:row;
+   height: 72px;
+    width: 1024px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.content_div{
+   padding: 70px 0 0 0 ;
+}
+
+.main_logo{
+    display: flex;
+    width: 13%;
+    border: 1;
+    /*background-color: pink;*/
+    cursor: pointer;
+    justify-content: center;
+}
+.main_logo_mo{
+    display: none;
+}
+
+.srch_bar{
+    /*background-color: darkturquoise;*/
+    display: flex;
+    width: 52%;
+    flex-direction: row-reverse;
+   
+}
+
+.srch_icon{
+    width: 30px;
+    height: 30px;
+   /* background-color: aqua;*/
+    background: url("../img/ico_srch.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* ====================애니메이션 검색바기능 ==================== */
+.srch_init{
+	width:0%;
+	-webkit-transition: width 0.4s ease-in-out;
+ 	 transition: width 0.4s ease-in-out;
+}
+.srch_extend{
+	display:block!important;
+	width:80%!important;
+	-webkit-transition: width 0.4s ease-in-out;
+  	transition: width 0.4s ease-in-out;
+}
+
+.srch_text{
+	padding:0px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-size: 23px;
+  background-color: rgba(255,255,255,0.8);
+  background-size: 25px 25px;
+  background-position: right -3px; 
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  color: #f7323f;
+  cursor: pointer;
+}
+/* ====================애니메이션 검색바기능 끝==================== */
+
+
+
+.grp_menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    color: white;
+    font-size: 18px;
+    /*background-color: blue;*/   
+    
+}
+
+
+.grp_menu div{
+
+    margin-left: 30px;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+
+.login_a a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.grp_menu div:hover{
+    color: white;
+}
+.hamber_menu_mo{
+	position : absolute;
+	margin-top: 10px;
+	z-index : 70000;
+}
+.hamber_menu_mo img{
+    display: none;
+}
+input[id="menuicon"] {/*input에서 checkbox숨기기*/
+    display:none;
+}
+
+
+
+/*=======================더보기 확장메뉴=======================*/
+/* Dropdown Button */
+.grp_dropbtn {
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  background: unset;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.grp_dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 27px;
+}
+
+.grp_dropbtn:hover{
+    color: white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contenttt {
+  display: none;
+  position: absolute;
+  top: 24px;
+  transform: translate(-50%);
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 200px;
+  border-radius: 16px;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-contenttt a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-contenttt a:hover {background-color: #f7323f;border-radius: 16px;}
+
+/* Show the dropdown menu on hover */
+.grp_dropdown:hover .dropdown-contenttt {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+
+input[id="menuicon"] {/*input에서 checkbox숨기기*/
+    display:none;
+}
+
+/*###########################################################*/
+/*###########################################################*/
+/*###########################################################*/
+
+/*=======================로그인상태 확장메뉴=======================*/
+.logout_dropbtn {
+  background-color: #f7323f;
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.logout_dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 27px;
+}
+
+.logout_dropbtn:hover{
+    color: white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-logout {
+  display: none;
+  position: absolute;
+  top: 24px;
+  transform: translate(-50%);
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 150px;
+  border-radius: 16px;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-logout a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-logout a:hover {background-color: #f7323f;border-radius: 16px;}
+
+/* Show the dropdown menu on hover */
+.logout_dropdown:hover .dropdown-logout {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.logout_dropdown:hover .logout_dropbtn {background-color: #f7323f;}
+
+
+
+/*=======================헤더 1024px아래========================*/
+
+@media screen and (max-width:1024px){
+   .header_div, .grp_menu div{
+      display: none;
+   }
+   
+    .wrap{
+        margin: 0px;
+    }
+
+    .header{
+    	position: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 45px;
+        background-color: #fff!important;
+    }
+
+   
+    .header_div_mo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+        
+/*============================햄버거메뉴============================*/
+
+input[id="menuicon"] {/*input에서 checkbox숨기기*/
+    display:none;
+}
+    
+input[id="menuicon"] + label {/*햄버거 넣어줄 공간 사이즈*/
+    display:block;
+    width:25px;
+    height:25px;
+    margin-left: 22px;
+    position:relative;
+    cursor:pointer;
+}
+    
+input[id="menuicon"] + label span {/*라벨((햄버거 3개의줄 ))의 사이즈*/
+    display:block;
+    position:absolute;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background: #404040;
+    transition:all .35s;/*모션 애니메이션 효과*/
+}
+    
+input[id="menuicon"] + label span:nth-child(1) {/*햄버거 윗줄 바 위치*/
+    top:0;
+}
+    
+input[id="menuicon"] + label span:nth-child(2) {/*햄버거 가운대줄 바 위치*/
+    top:50%;
+    transform:translateY(-50%);/*가운대 위치해주기위함 (margin-top:-2.5px;) 넣어줘도됨*/
+} 
+    
+input[id="menuicon"] + label span:nth-child(3) {/*햄버거 맨아래줄 바 위치*/
+    bottom:0;
+}
+
+/*=====================클릭되었은때 X 모양으로 바꿔주기 위한 작업=====================*/
+input[id="menuicon"]:checked + label span{
+	background: #fff;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+    
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity:0;
+}
+    
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+
+
+/*============================햄버거메뉴끝 ============================*/    
+    
+    
+    
+    /* .hamber_menu_mo img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        cursor: pointer;
+    } */
+
+    .main_logo_mo{
+        display: block;
+        border: 1;
+        /*background-color: pink;*/
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .srch_bar_mo{
+        /*background-color: darkturquoise;*/
+      display:block;
+      margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+
+    .srch_icon_mo{
+        width: 30px;
+        height: 30px;
+       /* background-color: aqua;*/
+        background: url("../img/ico_srch_mo.png") no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        
+    }
+    
+	.hamber_mo{
+		width: 30px;
+		height: 30px;
+		margin-left: 19px;
+	}
+    
+}
+
+
+/*================ 모달================= */
+.side-menu-off{
+	display: none;
+}
+.side-menu{
+	display: block!important;
+	width: 93%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 60000;	
+}
+a{
+	text-decoration: none;
+}
+.map-modal-bgh{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    z-index: 1;
+    padding: 5vh 0px;
+}
+
+.map-modal-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.hamber_modal_on{
+	position:fixed!important;
+}
+/*================== 사이드메뉴====================== */
+@media(max-width:1024px){
+	.side_top{
+		width: 100%;
+		height: 190px;
+		background: #ff0055;
+	}
+	
+	.side_guest{
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+	}
+	
+	.side_btn_join{
+		display: block;
+		height: 134px;
+		padding-top: 33px;
+		line-height: 1.5;
+		box-sizing: border-box;
+		color: #fff;
+	}
+	
+	.side_top .side_guest .side_btn_join a{
+		display: inline-block;
+		margin-top: 5px;
+		padding-right: 16px;
+		border: none;
+		background: url("../img/side_join.png") 100% 50% no-repeat;
+		background-size: 12px auto;
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+	}
+	
+	.side_btn_login{
+		font-size: 25px;
+	    font-weight: bold;
+	}
+	
+	
+	.side_content{
+		display:flex;
+		flex-direction: column;
+		clear:both;
+		overflow:hidden;
+		position:absolute;
+		top:190px;
+		right:0px;
+		bottom:0px;
+		left:0px;
+		background: #e8e8e8;
+	}
+	
+	.side_content_layout{
+	display:flex;
+	flex-direction: column;
+		position: absolute;
+		width: 100%;
+	}
+	
+	.home{
+		height:64px;
+		background: #fff;
+		border-bottom: 1px solid rgba(0,0,0,0.08);
+		font-size: 16px;
+		line-height: 64px;
+	}
+	
+	.home a{
+		display: block;
+		height: 64px;
+		font-size: 16px;
+		line-height: 64px;
+		color: rgba(0,0,0,0.87);
+		margin: 0 16px;
+		text-decoration:none;
+	}
+	
+	.location{
+		height:64px;
+		background: #fff;
+		border-top: 1px solid rgba(0,0,0,0.08);
+		font-size: 16px;
+		line-height: 64px;
+
+	}
+	
+	.location a{
+		display: block;
+		height: 64px;
+		font-size: 16px;
+		line-height: 64px;
+		color: rgba(0,0,0,0.87);
+		margin: 0 16px;
+		text-decoration:none;
+	}
+	
+	.reservation{
+		height:64px;
+		background: #fff;
+		border-top: 1px solid rgba(0,0,0,0.08);
+		border-bottom: 1px solid rgba(0,0,0,0.08);
+		font-size: 16px;
+		line-height: 64px;
+		
+	}
+	
+	.reservation a{
+		display: block;
+		height: 64px;
+		font-size: 16px;
+		line-height: 64px;
+		color: rgba(0,0,0,0.87);
+		margin: 0 16px;
+		text-decoration:none;
+	}
+	
+/* ==================아코디언 숙소유형==================== */
+	
+	.layout_type a {
+	    display: block;
+	    height: 64px;
+	    font-size: 16px;
+	    line-height: 64px;
+	    color: rgba(0,0,0,0.87);
+	    margin: 0 16px;
+	    text-decoration:none
+	}
+	
+	
+	.label{
+		height: 64px;
+		background: white;
+		cursor: pointer;
+		line-height: 65px;
+	}
+	
+	input[id*="label_layout"]{
+		display:none;
+	}
+	
+	input[id*="label_layout"] + label{
+		display:block;
+		width:auto;
+		heith:100%;
+		padding-left: 16px;
+		position: relative;
+		
+	}
+	
+	input[id*="label_layout"] + label em{
+		display: inline-block;
+	    content: '';
+	    position: absolute;
+	    top: 48%;
+	    left: 90%;
+	    width: 14px;
+	    height: 9px;
+	    margin-top: -5px;
+	   background:url('../img/ico_arr.png') 0 0 no-repeat;
+	    background-size: 14px auto;
+	}
+	
+	input[id*="label_layout"]:checked + label em{
+		background-position: 0 -9px;
+	}
+	
+	input[id*="label_layout"] + label + div{
+		
+		overflow: hidden;
+	}
+	
+	input[id*="label_layout"]:checked + label{
+		border-bottom: none;
+	}
+	
+	.layout_wrap { 
+		display: none;
+	}
+	
+	.layout_type{
+		width:auto;
+		height:50px;
+		background-color: white;
+		cursor: pointer;
+		padding-left: 30px;
+	}
+	
+	.layout_wrap a{
+		height: 50px!important;
+		background-color: white;
+		position: relative;
+		bottom: 7px;
+	}
+	
+	input[id*="label_layout"]:checked + label + div {
+		display: block!important;
+	}
+	
+	input[id*="label_layout"]:checked .layout_type{
+		display: block!important;
+		padding: 0 0px 0px 0;
+		border-bottom: 1px solid rgba(0,0,0,0.08)!important;
+	}
+	
+
+
+/*#######################################################*/
+/*#######################################################*/
+/*#######################################################*/
+
+/*===================아코디언 더보기 메뉴======================*/
+	.layout_type02:last-child{
+		border-bottom: 1px solid rgba(0,0,0,0.08)!important;
+	}
+	
+	.layout_type02 a {
+	    display: block;
+	    height: 64px;
+	    font-size: 16px;
+	    line-height: 64px;
+	    color: rgba(0,0,0,0.87);
+	    margin: 0 16px;
+	    text-decoration:none
+	}
+	
+	
+	.label02{
+		height: 64px;
+		background: white;
+		cursor: pointer;
+		line-height: 65px;
+	}
+	
+	input[id*="label_layout02"]{
+		display:none;
+	}
+	
+	input[id*="label_layout02"] + label{
+		display:block;
+		width:auto;
+		heith:100%;
+		padding-left: 16px;
+		position: relative;
+	}
+	
+	input[id*="label_layout02"] + label em{
+		display: inline-block;
+	    content: '';
+	    position: absolute;
+	    top: 48%;
+	    left: 90%;
+	    width: 14px;
+	    height: 9px;
+	    margin-top: -5px;
+	   background:url('../img/ico_arr.png') 0 0 no-repeat;
+	    background-size: 14px auto;
+	}
+	
+	input[id*="label_layout02"]:checked + label em{
+		background-position: 0 -9px;
+	}
+	
+	input[id*="label_layout02"] + label + div{
+		
+		overflow: hidden;
+	}
+	
+	input[id*="label_layout02"]:checked + label{
+		border-bottom: none;
+	}
+	
+	.layout_wrap02 { 
+		display: none;
+	}
+	
+	.layout_type02{
+		width:auto;
+		height:50px;
+		background-color: white;
+		cursor: pointer;
+		padding-left: 30px;
+	}
+	
+	.layout_wrap02 a{
+		height: 50px!important;
+		background-color: white;
+		position: relative;
+		bottom: 7px;
+	}
+	
+	input[id*="label_layout02"]:checked + label + div {
+		display: block!important;
+	}
+	
+	input[id*="label_layout02"]:checked .layout_type{
+		display: block!important;
+		padding: 0 0px 0px 0;
+		border-bottom: 1px solid rgba(0,0,0,0.08)!important;
+	}
+	
+	.side_footer{
+		padding: 43px 0 41px 0;
+		font-size: 14px;
+		color: rgba(0,0,0,0.56);
+		text-align: center;
+	}
+	
+	.side_footer a{
+		display: inline-block;
+		padding: 3px 0 5px 0;
+		border-bottom: 1px dotted rgba(0,0,0,0.26);
+		font-size: 24px;
+		font-weight: bold;
+		color: rgba(0,0,0,0.6);
+		text-decoration:none
+	}
+	
+	.side_footer p:nth-child(3) {
+		padding-top: 9px;
+		line-height: 1.4;	
+	}
+
+}
+
+
+
+

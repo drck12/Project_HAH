@@ -1,0 +1,120 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+#top {
+    display:flex;
+
+}
+
+#left {
+   
+       float: left;
+}
+
+
+#gallery {
+ 
+  margin: 0;
+}
+.myCarousel{
+	
+}
+#carousel-indicators{
+	width: 490px;
+	height: 348px;
+	margin: 0;
+}
+#right {
+    
+    width: 424px;
+}
+
+#info {
+    padding: 0;
+}
+
+#badge {
+    display: block;
+    top: 0;
+}
+
+#build_badge {
+    display: inline-block;
+    float: left;
+    height: 18px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 18px
+}
+#score_cnt{
+    position: relative;
+    clear: both;
+    margin: 9px 0 6px 0;
+    font-size: 18px;
+    color: rgb(255,167,38);
+}
+#score{
+        display: inline-block;
+    position: relative;
+    top: -3px;
+    height: 18px;
+    margin-right: 7px;
+    padding: 0 4px;
+    border-radius: 4px;
+    background: rgb(255,167,38);
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    
+}
+#address{
+    padding-top: 6px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.56);
+}
+#event_list{
+        background: #009abd;
+    background: -moz-linear-gradient(left, #009abd 0%, #12b1a2 100%);
+    background: -webkit-linear-gradient(left, #009abd 0%,#12b1a2 100%);
+    background: linear-gradient(to right, #009abd 0%,#12b1a2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009abd',
+}
+
+.list{
+	color : #fff;
+}
+
+/*  .li_event{
+    overflow: hidden;
+    padding-left: 16px;
+    
+    background-size: 12px auto;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}  */
+#comment{
+ display: block;
+	position: relative;
+	margin-top: 16px;
+	padding: 26px 24px;
+	background: rgb(250, 250, 250);   
+    
+}
+#strong{
+    font-weight: bold;
+}
+
+ 

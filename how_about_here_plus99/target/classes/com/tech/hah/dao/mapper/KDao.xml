@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tech.hah.dao.KDao">
+	
+	
+	<sql id="loginUser">
+		<choose>
+			<when test='_parameter != 0'>
+				WHERE ACC_CODE = #{_parameter}
+			</when>
+			<otherwise>
+				
+			</otherwise>
+		</choose>
+	</sql>
+
+	<!-- 관리자 페이지의 차트를 만들기 위해 table data 불러오기 위한 sql문장 -->
+	<select id="chart_one" resultType="hashmap">
+		SELECT X , COUNT(R_TYPE) Y
+		FROM (SELECT A.X, B.R_TYPE 
+		FROM (SELECT * FROM 
+		<![CDATA[( SELECT TO_CHAR(SYSDATE + LEVEL -4, 'YY/MM/DD') X 
+		FROM DUAL CONNECT BY LEVEL <= 7 )) A
+		, RESERVE B
+		WHERE A.X >= B.S_DATE(+)
+		AND A.X < B.E_DATE(+))]]>
+		GROUP BY X
+		ORDER BY X
+	</select>
+	
+	<select id="chart_two" resultType="hashmap">
+		SELECT TO_CHAR(X, 'YYYY/MM') X , COUNT(Y) Y
+		FROM(
+		SELECT TO_DATE(A.X, 'YY/MM/DD') X , B.R_TYPE Y
+		FROM (SELECT TO_CHAR(ADD_MONTHS(TRUNC(SYSDATE, 'MM'), -3) + LEVEL - 1,
+		'YY/MM/DD') X
+		<![CDATA[FROM DUAL CONNECT BY LEVEL <= LAST_DAY(ADD_MONTHS(SYSDATE, 3)) -
+		ADD_MONTHS(TRUNC(SYSDATE, 'MM'), -3) + 1) A, RESERVE B
+		WHERE A.X >= B.S_DATE(+)
+		AND A.X < B.E_DATE(+))]]>
+		GROUP BY TO_CHAR(X, 'YYYY/MM')
+		ORDER BY X
+	</select>
+	
+	<select id="chart_three" resultType="hashmap">
+		SELECT ROOM_TYPE X, ROUND(AVG(ROOM_PRICE)) Y 
+		FROM ROOM
+		GROUP BY ROOM_TYPE
+	</select>
+	
+	<select id="chart_four" resultType="hashmap">
+		SELECT ACC_CITY X, COUNT(ACC_NAME) Y 
+		FROM ACCOMMODATION
+		GROUP BY ACC_CITY
+	</select>
+	
+	<!-- 관리자 페이지의 테이블 작성을 위한 sql문장 -->
+	<insert id="write">
+		INSERT INTO MVC_BOARD(BID, BNAME, BTITLE, BCONTENT, BDATE, BHIT, BGROUP, BSTEP, BINDENT, FILESRC) 
+		VALUES(MVC_BOARD_SEQ.NEXTVAL, 
+		#{param1}, #{param2}, #{param3}, 
+		SYSDATE, 0,MVC_BOARD_SEQ.CURRVAL, 0, 0, #{param4})
+	</insert>
+	
+	<!-- 관리자 페이지에 나타난 데이터를 삭제하는 sql문장 -->
+	<delete id="delete">
+		DELETE FROM MVC_BOARD WHERE BID = #{param1}
+	</delete>
+	
+	<!-- 관리자 페이지에 accommodation table을 보여주기 위한 sql문장 -->
+	<select id="acc"  resultType="hashmap">
+		SELECT * FROM ACCOMMODATION ORDER BY ACC_CODE
+	</select>
+	
+	<insert id="room_write">
+		INSERT INTO ROOM
+		VALUES(ROOM_SEQ.NEXTVAL, 
+		#{param1}, #{param2}, #{param3})
+	</insert>
+	
+	<insert id="acc_write">
+		INSERT INTO ACCOMMODATION
+		VALUES(ACC_SEQ.NEXTVAL, 
+		#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8},
+		#{param9}, #{param10}, #{param11}, #{param12}, #{param13}, #{param14}, #{param15}, #{param16}, #{param17}, #{param18}, #{param19}
+		, #{param20}, #{param21}, #{param22}, #{param23})
+	</insert>
+	
+	<select id="room"  resultType="hashmap">
+		SELECT * FROM ROOM 
+		<include refid="loginUser" />
+		ORDER BY ROOM_CODE
+	</select>
+	
+	<select id="res"  resultType="hashmap">
+		SELECT * FROM RESERVE 
+		<include refid="loginUser" />
+		ORDER BY RES_CODE
+	</select>
+	
+	<select id="review_board"  resultType="hashmap">
+		SELECT ROW_NUMBER() OVER(ORDER BY A.REB_REGDATE DESC) RN, TRUNC((SYSDATE-A.REB_REGDATE),5) REB_PAST, TRUNC((SYSDATE-A.RERE_REGDATE),5) RERE_PAST, A.* FROM REVIEW_BOARD A WHERE ACC_CODE = #{param1} ORDER BY REB_REGDATE DESC
+	</select>
+	
+	<select id="review_total"  resultType="hashmap">
+		SELECT COUNT(REB_TITLE) REB, COUNT(RERE_CONTENT) RERE, ROUND(AVG(REB_RATING),1) RATING FROM REVIEW_BOARD WHERE ACC_CODE = #{param1}
+	</select>
+	
+	<select id="acc_info"  resultType="hashmap">
+		SELECT * FROM ACCOMMODATION WHERE ACC_CODE = #{param1}
+	</select>
+	
+	<select id="room_info"  resultType="hashmap">
+		<![CDATA[SELECT A.* FROM ROOM A WHERE ACC_CODE = #{param1}
+		AND NOT EXISTS (SELECT 1 FROM (SELECT A.IN_DATE, B.ROOM_CODE FROM
+		(SELECT * FROM ( SELECT TO_CHAR(TO_DATE(#{param2}) + LEVEL -1, 'YYYY-MM-DD') IN_DATE FROM DUAL 
+		CONNECT BY LEVEL <= TO_DATE(#{param3}) - TO_DATE(#{param2}))) A, (SELECT * FROM RESERVE WHERE ACC_CODE = #{param1}) B
+		WHERE A.IN_DATE >= B.S_DATE(+) AND A.IN_DATE < B.E_DATE(+)) B WHERE A.ROOM_CODE = B.ROOM_CODE)]]>
+	</select>
+	
+	<select id="room_price"  resultType="hashmap">
+		SELECT (SELECT MIN(ROOM_PRICE) FROM ROOM WHERE ACC_CODE = #{param1} AND ROOM_TYPE = 'SINGLEROOM') SINGLE_PRICE, 
+		(SELECT MIN(ROOM_PRICE) FROM ROOM WHERE ACC_CODE = #{param1} AND ROOM_TYPE = 'DOUBLEROOM') DOUBLE_PRICE, 
+		(SELECT MIN(ROOM_PRICE) FROM ROOM WHERE ACC_CODE = #{param1} AND ROOM_TYPE = 'TWINROOM') TWIN_PRICE
+		FROM DUAL
+	</select>
+	
+	<select id="photo"  resultType="hashmap">
+		SELECT * FROM PHOTO WHERE ACC_CODE = #{param1}
+	</select>
+	
+	<select id="review"  resultType="hashmap">
+		SELECT * FROM REVIEW_BOARD
+		<include refid="loginUser" />
+	</select>
+	
+	<update id="rere_write">
+		UPDATE REVIEW_BOARD SET RERE_CONTENT = #{param2}, RERE_REGDATE = SYSDATE WHERE REB_SEQ = #{param1}
+	</update>
+	
+	<select id="mem"  resultType="hashmap">
+		SELECT * FROM MEMBER_INFO
+	</select>
+	
+	<select id="inq"  resultType="hashmap">
+		SELECT * FROM INQUIRY
+	</select>
+	
+	<select id="reb_re"  resultType="hashmap">
+		SELECT * FROM REVIEW_BOARD WHERE REB_SEQ = #{param1}
+	</select>
+	
+	<select id="inq_re"  resultType="hashmap">
+		SELECT * FROM INQUIRY WHERE SEQ = #{param1}
+	</select>
+	
+	<update id="inre_write">
+		UPDATE INQUIRY SET REIN_INQUIRY = #{param2}, REIN_REGDATE = SYSDATE WHERE SEQ = #{param1}
+	</update>
+	
+</mapper>

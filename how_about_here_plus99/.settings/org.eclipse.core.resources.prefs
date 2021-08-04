@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/tech/hah/controller/CController.java=UTF-8
+encoding//src/main/java/com/tech/hah/controller/KController.java=UTF-8
+encoding//src/main/java/com/tech/hah/controller/MoreController.java=UTF-8
+encoding//src/main/java/com/tech/hah/dao/CDao.java=UTF-8
+encoding//src/main/java/com/tech/hah/dao/KDao.java=UTF-8
+encoding//src/main/java/com/tech/hah/service/CalDate.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
+encoding//src/main/webapp/resources/css/Cstyle.css=UTF-8
+encoding/<project>=UTF-8

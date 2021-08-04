@@ -1,0 +1,85 @@
+.body_form{
+	width: 336px;
+    margin: 100px auto 0 auto;
+}
+
+
+.join_user_title {
+    text-align: center;
+    height: 50px;
+}
+
+
+.join_user_title a {
+    background: url(../img/new_main_logo_mo.png) 50% 50% no-repeat;
+    background-size: 112px 23px;
+    font-size: 2rem;
+    width: 112px;
+    height: 44px;
+    display: inline-block;
+    text-indent: -9999px;
+    color : black;
+    padding: 0px;
+}
+
+.select_form{
+	margin : 30px 0px;
+}
+
+.btn-submit {
+    border: none;
+    height: 56px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(236,27,71,1);
+    cursor: pointer;
+}
+span{
+	margin-left: 30px;
+    color: rgba(0,0,0,0.48);
+}
+
+.check_number_off{
+	margin-top: 50px;
+	display: none;
+}
+.input_wrap{
+	position: relative;
+    margin: 0 0 10px 0;
+    
+	
+}
+.pw_modify_form{
+	display: none;
+}
+
+.input_number{
+	width:98%;
+	height:35px;
+	border-radius: 5px;
+	text-align:center;
+	font-size: 20px;
+	
+}
+
+
+.input_form_wrap{ 
+	margin-bottom: 30px;
+}
+.input_pw{
+	position: relative;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(0,0,0,0.35);
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.invalid{
+	font-size: 15px;
+}
+.nvalid{
+	font-size: 15px;
+}

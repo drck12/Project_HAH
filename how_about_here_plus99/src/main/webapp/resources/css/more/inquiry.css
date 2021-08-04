@@ -1,0 +1,402 @@
+*{margin:0;padding:0;}
+
+.head{
+    width: 100%;
+    height: 211px;
+    background-color: rgba(250, 88, 91, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head2{
+	width:1024px;
+	 margin: 0 auto;
+}
+
+.head2 h2{
+	display: block;
+    margin: 21px 0 0 31px;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #fff;
+}
+.body_wrap{
+	height:100%;
+	width: 100%;
+	display :flex;
+	justify-content: center;
+	    padding-top: 54px;
+}
+.body{
+	width: 1024px;
+    display: flex;
+    padding-left: 31px  
+}
+/* ====================바디 왼쪽 리스트 ==================== */
+
+.list {
+	padding-left:31px;
+    width: 269px;
+    height: 100%;
+    padding-left: 0px;
+   /*  background-color: yellow; */
+    
+}
+
+.list ul li{
+	margin-bottom: 26px;
+	list-style:none;
+	
+}
+
+.list ul li a{
+	text-decoration: none;
+	font-size: 18px;
+    color: rgba(0,0,0,0.56);
+}
+
+.mobile_top{
+	display:none;}
+	
+.inquiry_off{
+	display: none;
+}
+.inquiry_on{
+	display:block;
+}
+em{
+	font-style: normal;
+}
+	
+/* ====================1024이하 반응형 ==================== */
+@media (max-width:1024px){
+
+.inquiry{
+	margin: 0px 10px 0px 10px;
+	width:100%;}
+.mobiel_top{
+	display:block!important;
+}
+.list{
+	display:none;
+}
+.head{
+	display:none;
+}
+.body{
+	padding-left: 0px;
+	width: 100%;
+}
+.content{
+	width:100%!important;
+}
+.content-title{
+	display:none;
+}
+.inquiry_mobile_text{
+	padding: 8px;
+    background-color: rgba(232, 232, 232, 1);
+    margin-bottom: 20px;
+}
+.inquiry_mobile_text p em{
+	display:block;
+}
+.inquiry_form form div{
+	
+}
+.inquiry_form form div p{
+	   border-radius: 4px;
+    background: #fff;
+    padding: 13px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(0,0,0,0.87);
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    
+}
+
+
+
+.content-title span {
+    width: 50%!important;
+    text-align: center!important;
+}
+
+
+.mobile_top{
+	display: block!important;
+	position: relative;
+    height: 44px;
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+	
+}
+
+.mobile_top_btn{
+	display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 44px;
+    padding: 0 16px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 44px;
+    color: rgba(0,0,0,0.87);
+}
+
+} 
+/* ====================바디 오른쪽 나의 문의==================== */
+
+
+.active-more{
+	    font-size: 18px;
+    font-weight: bold;
+    color: rgb(230,28,81)!important;}
+    
+.active::after{
+	display: block;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(242,17,76);
+}
+
+.content{
+ width: 724px;
+    /* background-color: blue; */
+    height: 100%;
+
+}
+.content-title{
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content-title span{
+	    font-weight: bold;
+    color: rgb(242,17,76);
+    display: inline-block;
+    float: none;
+    position: relative;
+    width: auto;
+    height: 40px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.my_inquiry_list{
+	list-style: none;
+	margin-bottom: 0;
+    padding: 0 0;
+    margin-top: 0px;
+}
+
+.my_inquiry_list label{
+	color: black;
+	    display: block;
+    position: relative;
+    height: auto;
+    margin-bottom: 0;
+    padding: 38px 24px 35px 0;
+    border-radius: 0;
+    background: #fff;
+    font-size: 18px;
+    line-height: normal;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    
+}
+
+.my_inquiry_list span{
+	font-size: 16px;
+    color: rgba(0,0,0,0.38);
+}
+	
+input[id*="myinquiry"]{
+	display:none;
+}
+input[id*="myinquiry"] + label{
+	display:block;
+	width:100%;
+	heith:100%:
+}
+
+input[id*="myinquiry"] + label em{
+	display: inline-block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 14px;
+    height: 9px;
+    margin-top: -5px;
+    background:url('../../img/ico_arr.png') 0 0 no-repeat;
+    background-size: 14px auto;
+}
+
+input[id*="myinquiry"]:checked + label em{
+	background-position: 0 -9px;
+}
+
+input[id*="myinquiry"] + label + div{
+	max-height:0;
+	overflow: hidden;
+}
+input[id*="myinquiry"]:checked + label{
+	border-bottom: none;
+}
+input[id*="myinquiry"]:checked + label + div{
+	max-height:100%;
+	padding: 0 24px 0px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+/* ====================바디 오른쪽 질문목록==================== */
+.inquiry{
+ width:697px;	
+}
+.active-more{
+	    font-size: 18px;
+    font-weight: bold;
+    color: rgb(230,28,81)!important;}
+    
+.active::after{
+	display: block;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(242,17,76);
+}
+
+.content{
+ width: 724px;
+    /* background-color: blue; */
+    height: 100%;
+
+}
+.content-title{
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content-title span{
+	 cursor: pointer;
+    color: rgba(0,0,0,0.56);
+    display: inline-block;
+    float: none;
+    position: relative;
+    width: auto;
+    height: 40px;
+    font-size: 18px;
+    text-align: left;
+    margin-right: 20px;
+}
+.active{
+	color: rgb(242,17,76)!important;
+	font-weight: bold;
+}
+
+.inquiry_reply{
+	margin-top: 30px;
+    margin-left: 20px;
+}
+.inquiry_reply p{
+	margin-top : 5px;
+	margin-bottom: 5px;
+}
+
+
+/* ====================위로 공통 css==================== */
+b{
+	width:100%;
+}
+.inquiry_form{
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+    color: rgba(0,0,0,0.56);
+    
+}
+.inquiry_form div p{
+	    margin-top: 15px;
+	    margin-bottom: 30px;
+	    font-size: 16px;
+}
+.info_wrap{
+	display: flex;
+	flex-direction: column;
+}
+.select_type_1{
+	border: 1px solid rgba(0,0,0,0.08);
+	border-radius: 5px;
+	margin-bottom: 40px;
+	margin-top: 15px;
+	height: 50px;
+	background-color: rgb(250,250,250);
+}
+
+.inp_wrap input{
+	height: 60px;
+	width:100%;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+.text_wrap div textarea{
+	width:100%;
+	height: 200px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.08);
+	resize: none;
+}
+.text_wrap div{
+	margin-top: 15px;
+}
+.inp_chk_04{
+	width: 14px;
+    height: 14px;
+}
+.agree_wrap{
+	margin: 15px 0px 30px 0px;
+}
+.agree_wrap a{
+	color: rgba(0, 0, 0, 0.56);
+}
+.btn_wrap{
+	text-align: center;
+}
+.btn_red_fill{
+	background: linear-gradient(to bottom, #ff0055 0%,#e62243 100%);
+	display: inline-block;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 144px;
+    height: 48px;
+	
+}
+
+
+
+

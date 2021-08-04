@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tech.hah.dao.CDao2">
+
+	<insert id="joinMember">
+		INSERT INTO MEMBER_INFO VALUES(ID_SEQ.NEXTVAL,
+		#{email},#{pw},#{phone},
+		'회원',#{unick},#{selCheck1},#{selCheck2})
+	</insert>
+	
+	<select parameterType="String" id="emailCheck" resultType="int">
+		SELECT COUNT(*) FROM MEMBER_INFO WHERE MEM_EMAIL = #{email}
+	</select>
+	
+	<select parameterType="String" id="loginuser"  resultType="com.tech.hah.dto.UserDto">
+		SELECT MEM_EMAIL,MEM_PHONE,MEM_NICK,MEM_PW,MEM_ACCESS FROM MEMBER_INFO WHERE MEM_EMAIL = #{email}
+	</select>
+	
+	<select parameterType="String" id="inquiryCheck"  resultType="com.tech.hah.dto.Inquiry">
+		SELECT * FROM INQUIRY WHERE UEMAIL=#{mem_email}
+	</select>
+	
+	<insert id="inquiry">
+		INSERT INTO INQUIRY(SEQ,UEMAIL,EMAIL,PHONE,ROOM_TYPE,INQUIRY_TYPE,INQUIRY_CONTENT,WRITE_DAY) VALUES(INQUIRY_SEQ.NEXTVAL,#{useremail},#{email},#{phone},#{room_type},#{inquiry_type},#{inquiry_content},TO_CHAR(SYSDATE, 'YYYY-MM-DD'))
+	</insert>
+	
+	<insert id="insertReservation" parameterType="com.tech.hah.dto.ReserveDto">
+		INSERT INTO RESERVE VALUES (RESERVE_SEQ.NEXTVAL,#{acc_code},#{room_code},#{r_type},#{s_date},#{e_date},#{r_price},SYSDATE,#{r_useremail},#{r_name},#{r_phone},#{acc_name},'예약 완료')
+		<selectKey keyProperty="res_code" resultType="Integer" order="AFTER"> 
+		SELECT reserve_seq.currval FROM dual 
+		</selectKey>
+	</insert>
+	
+	<select id="reserve_check"  resultType="com.tech.hah.dto.ReserveCheckDto">
+		SELECT RES_CODE,ACC_CODE,R_TYPE,TO_CHAR(S_DATE,'YYYY/MM/DD') AS S_DATE,TO_CHAR(E_DATE,'YYYY/MM/DD') AS E_DATE,R_PRICE,R_NAME,R_PHONE,ACC_NAME,R_STATUS,(E_DATE-S_DATE) AS ACCDAYS FROM RESERVE WHERE RES_CODE = #{res_code}
+	</select>
+	
+
+</mapper>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- main layout -->
+	<definition name="layout_main" template="/WEB-INF/views/common/main_layout.jsp">
+		<put-attribute name="modal" value="" />
+		<put-attribute name="title" value="취향대로 머물다 여기어때" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+	</definition>
+	
+	<definition name="layout_kdetail" template="/WEB-INF/views/common/layout_kdetail.jsp">
+		<put-attribute name="modal" value="" />
+		<put-attribute name="title" value="취향대로 머물다 여기어때" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+	</definition>
+
+	<!-- motel layout -->
+	<definition name="layout_motel" template="/WEB-INF/views/common/main_layout.jsp">
+		<put-attribute name="modal" value="" />
+		<put-attribute name="title" value="취향대로 머물다 여기어때" />
+		<put-attribute name="header" value="/WEB-INF/views/common/motel_header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+	</definition>
+	
+	<definition name="main" extends="layout_main">
+		<put-attribute name="modal" value="/WEB-INF/views/common/modal.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/common/main.jsp" />
+	</definition>
+		
+	<definition name="hotel" extends="layout_main">
+		<put-attribute name="modal" value="/WEB-INF/views/common/acc_modal.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/hotel.jsp" />
+	</definition>
+	
+	<definition name="myplace" extends="layout_main">
+		<put-attribute name="modal" value="/WEB-INF/views/common/acc_modal.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/myplace.jsp" />
+	</definition>
+
+	<definition name="motel" extends="layout_motel">
+		<put-attribute name="content" value="/WEB-INF/views/motel.jsp" />
+	</definition>
+	
+	<definition name="pension" extends="layout_main">
+	<put-attribute name="modal" value="/WEB-INF/views/common/acc_modal.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/pension.jsp" />
+	</definition>
+	
+	<definition name="reserve" extends="layout_main">
+		<put-attribute name="content" value="/WEB-INF/views/reserve.jsp" />
+	</definition>
+	
+	<definition name="kdetail_page" extends="layout_kdetail">
+		<put-attribute name="content" value="/WEB-INF/views/kdetail_page.jsp" />
+	</definition>
+
+	
+</tiles-definitions>
+	
+	
+	

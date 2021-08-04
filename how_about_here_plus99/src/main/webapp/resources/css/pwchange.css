@@ -1,0 +1,78 @@
+.body_form{
+	width: 336px;
+    margin: 100px auto 0 auto;
+}
+
+
+.join_user_title {
+    text-align: center;
+    height: 50px;
+}
+
+
+.join_user_title a {
+    background: url(../img/new_main_logo_mo.png) 50% 50% no-repeat;
+    background-size: 112px 23px;
+    font-size: 2rem;
+    width: 112px;
+    height: 44px;
+    display: inline-block;
+    text-indent: -9999px;
+    color : black;
+    padding: 0px;
+}
+
+
+
+.inputinfo{
+	position: relative;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    
+}
+
+.link_half{
+	overflow: hidden;
+    position: relative;
+    height: 56px;
+    margin-top: 9px;
+}
+
+.link_half div{
+	    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 56px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.link_half div a{
+	text-decoration: none;
+    color: black;
+}
+
+.link_half:after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    width: 1px;
+    height: 16px;
+    background: rgba(0,0,0,0.08);
+}
+
+.btn-submit {
+    border: none;
+    height: 56px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(236,27,71,1);
+}

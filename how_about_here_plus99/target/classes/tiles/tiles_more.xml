@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- layout2 -->
+	
+	<definition name="layout_more" template="/WEB-INF/views/common/main_layout.jsp">
+		<put-attribute name="title" value="취향대로 머물다 여기어때" />
+		<put-attribute name="modal" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+	</definition>
+	
+	<definition name="notice" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/notice.jsp" />
+	</definition>
+		
+	<definition name="inquiry" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/inquiry.jsp" />
+	</definition>
+	
+	<definition name="terms" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/terms.jsp" />
+	</definition>
+	
+	<definition name="faq1" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq1.jsp" />
+	</definition>
+	
+	<definition name="faq2" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq2.jsp" />
+	</definition>
+	
+	<definition name="faq3" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq3.jsp" />
+	</definition>
+	
+	<definition name="faq4" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq4.jsp" />
+	</definition>
+	
+	<definition name="faq5" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq5.jsp" />
+	</definition>
+	
+	<definition name="faq6" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq6.jsp" />
+	</definition>
+	
+	<definition name="faq7" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq7.jsp" />
+	</definition>
+	
+	<definition name="faq8" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq8.jsp" />
+	</definition>
+	
+	<definition name="faq9" extends="layout_more">
+		<put-attribute name="content" value="/WEB-INF/views/more/faq/faq9.jsp" />
+	</definition>
+	
+	<definition name="myinfo/myinfo_page" extends="layout_main">
+    <put-attribute name="modal" value="/WEB-INF/views/myinfo/myinfo_modal.jsp" />
+    <put-attribute name="content" value="/WEB-INF/views/myinfo/myinfo_page.jsp" />
+  </definition>
+  
+   <definition name="reserve" extends="layout_main">
+    <put-attribute name="modal" value="/WEB-INF/views/reserve_modal.jsp" />
+    <put-attribute name="content" value="/WEB-INF/views/reserve.jsp" />
+  </definition>
+  
+  	<definition name="myinfo/myinfo_reservation" extends="layout_main">
+		<put-attribute name="content" value="/WEB-INF/views/myinfo/myinfo_reservation.jsp" />
+	</definition>
+	
+  	<definition name="reserve_detail_Layout" extends="layout_main">
+		<put-attribute name="content" value="/WEB-INF/views/myinfo/myinfo_reservation_detail.jsp" />
+	</definition>
+	
+	
+  <definition name="myinfo/myinfo_reservation_detail" extends="layout_main">
+		<put-attribute name="content" value="/WEB-INF/views/myinfo/myinfo_reservation_detail.jsp" />
+	</definition>
+	
+  <definition name="guest_reservation_detail" extends="layout_main">
+		<put-attribute name="content" value="/WEB-INF/views/myinfo/guest_reservation_detail.jsp" />
+	</definition>
+  
+</tiles-definitions>
